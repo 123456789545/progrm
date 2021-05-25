@@ -1,0 +1,33 @@
+int qwe(int x, int y)
+{
+	int tmp = 0, r = 0;
+	if (x < y)
+	{
+		tmp = x;
+		x = y;
+		y = tmp;
+	}
+	while ((r = x % y) != 0)
+	{
+		x = y;
+		y = r;
+	}
+	return y;
+}
+int ret(int x, int y, int qwe1)
+{
+	return (x * y / qwe1);
+}
+#include<stdio.h>
+int main()
+{
+	int qwe1 = 0;//最大公约数
+	int ret2 = 0;//最大公倍数
+	int a, b;
+	printf("请输入两个整数\n");
+	scanf("%d%d", &a, &b);
+	qwe1 = qwe(a, b);
+	ret2 = ret(a, b, qwe1);
+	printf("%d %d", qwe1, ret2);
+	return 0;
+}
