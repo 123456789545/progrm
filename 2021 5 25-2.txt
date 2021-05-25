@@ -1,0 +1,27 @@
+#include<stdio.h>
+char qwe(char n)
+{
+	char z;
+	if(n>'A' && n<'Z')
+	{
+		z=n+32;
+	}
+	else if(n>'a' && n<'z')
+	{
+		z=n-32;
+	}
+	else
+	{
+		z=n;
+	}
+	return z;
+}
+int main()
+{
+	char n,qwe1;
+	printf("请输入一个字符\n");
+	scanf("%c",&n);
+	qwe1=qwe(n);
+	printf("%c\n",qwe1);
+	return 0;
+}
